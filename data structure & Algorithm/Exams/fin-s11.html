@@ -1,0 +1,271 @@
+<HTML>
+<HEAD>
+<TITLE>COS 226: Final Exam</TITLE></HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0">
+<TR ALIGN="LEFT" VALIGN="BOTTOM">
+<TD><STRONG>NAME:</STRONG><BR><BR><BR><BR>
+<STRONG><FONT SIZE="+2">Final Exam</FONT></STRONG></TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM">
+<STRONG>COS 226 Solutions, Spring 2011
+</STRONG></TD></TR></TABLE>
+<hr>
+<font color=red><b>4A and 6B are UNDER CONSTRUCTION</b></font>
+<ol>
+<li>MST
+<pre>A. 1 2 3 4 5 7 9
+
+B. 2 1 3 4 7 5 9
+
+</pre>
+
+<li>KMP
+<pre>
+  0 1 2 3 4 5 6 7 8
+  Z X X X Z X Z X X
+X 0 2 3 4 0 6 3 8 9
+Y 0 0 0 0 0 0 0 0 0
+Z 1 1 1 1 5 1 7 1 1
+
+</pre>
+<li> Match the algorithms
+<pre>
+F H A C I D G E B J 
+</pre>
+<li> DFS Trace
+<ol type="A"><li>       <br>
+TBAdded
+<img src="spr11/spr11-dfs.png" width=75% height=50%>          
+<pre>
+B. 0: 3, 2, 1
+   1: 3, 2, 0
+   2: 1, 0
+   3: 0, 1
+
+C. dfs(3)
+     dfs(0)
+       dfs(1)
+         check 0
+         dfs(2)
+           check 1
+         2 done
+         check 3
+       1 done
+       check 3
+     0 done
+     check 1
+   3 done
+</pre>
+</ol>
+<li>LZW compression
+<pre>
+in:   A  A A  A A A  B  A A A  A A  B
+out: 41   81     82 42     82   81 42 80
+
+key value
+AA   81
+AAA  82
+AAAB 83
+BA   84
+AAAA 85
+AAB  86
+</pre>
+
+<li>TST
+<pre>
+A.
+aac (4)
+aat (2)
+ac  (1)
+ct  (0)
+g   (3)
+ta  (5)
+ca  (missing index) <=== +1
+
+B. TBAdded
+
+</pre>
+
+<li>String sorts<pre>
+          
+<table cellpadding=10>
+<th>
+<td>stable</td>
+<td>inplace</td>
+<td>sublinear</td>
+</th>
+<tr><td>Quicksort</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+<tr><td>Mergesort</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<tr><td>LSD string sort</td>
+<td>Y</td>
+<td>N</td>
+<td>N</td>
+<tr><td>MSD String sort</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<tr><td>3-way string quicksort</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+
+</table>
+
+</pre>
+
+<li> Regular Expressions
+<ol type="A"><li>  
+<pre>0->11 0->1
+1->5 1->9 1->2
+4->8
+5->6
+6->7 6->5
+8->9
+9->1 9->10
+10->13 
+11->12
+12->11 12->13
+</pre>
+<li> 
+<pre>
+0, 1, 5
+2, 6
+2, 6, 7, 8, 9
+3, 7
+3, 6, 7, 8, 9
+7
+6, 7, 8, 9
+</ol>
+<li>Bellman-Ford
+<table cellpadding=10>
+<th>
+<td>&nbsp;</td>
+<td>successful<br> relax</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+</th>
+<tr><td>phase 1</td>
+<td>A->C</td>
+<td>X</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>A->B</td>
+<td>X</td>
+<td>&nbsp;</td>
+<td>1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>phase 2</td>
+<td>C->D</td>
+<td>X</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0</td>
+</tr>
+<tr><td>phase 3</td>
+<td>D->B</td>
+<td>X</td>
+<td>&nbsp;</td>
+<td>-1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+</table>
+
+<li>Prefix-free codes
+<pre>
+code 1 <i>none</i>
+code 2 A B C
+code 3 A
+code 4 A C
+</pre>
+
+<li>3-way partitioning
+<pre>A A A H H U M U N U K U N U K U M P U U M U
+Number of exchanges: 20
+</pre>
+
+<li>Linear Programming
+<pre>
+Maximize Xbt + Xct subject to constraints
+0 <= Xsa <= 7
+0 <= Xsb <= 4
+0 <= Xac <= 5
+0 <= Xba <= 1
+0 <= Xbc <= 2
+0 <= Xbt <= 6
+0 <= Xct <= 3
+
+Xsa + Xba = Xac
+Xsb = Xba + Xbc + Xbt
+Xac + Xbc = Xct
+ 
+</pre>
+<li>Subsequence
+<ol type="A"><li>st.put(next, new Queue<Integer>());
+<li>Queue<Integer> q = st.get(next);
+<li>st.delete(next);
+<li>st.put(next+d, q);
+<li>N log Q
+<li>N
+</ol>
+<br>
+<li>Maxflow
+<ol type="A"><li>i, iii, v, 
+<li>i, ii, iii, vi, viii
+</ol>
+<br>
+<li>Intractibility
+<table cellpadding=10>
+<th>
+<td>P</td>
+<td>NP</td>
+<td>NP-complete</td>
+</th>
+<tr><td>linear equation satisfiability</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr><td>linear inequality satisfiability</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr><td>0-1 integer linear inequality satisfiability</td>
+<td>? or N*</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr><td>boolean satisfiability</td>
+<td>? or N*</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr><td>integer factoring</td>
+<td>?</td>
+<td>Y</td>
+<td>N or ?</td>
+</tr>
+
+</table>
+
+<li> What is the shortest distance between 2 jokes?
+<pre> a straight line
+</pre>

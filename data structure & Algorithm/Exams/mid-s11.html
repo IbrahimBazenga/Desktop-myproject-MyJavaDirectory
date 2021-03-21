@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+<TITLE>COS 226: Midterm Exam</TITLE></HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0">
+<TR ALIGN="LEFT" VALIGN="BOTTOM">
+<TD><STRONG>NAME:</STRONG><BR><BR><BR><BR>
+<STRONG><FONT SIZE="+2">Midterm Exam</FONT></STRONG></TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM">
+<STRONG>COS 226 Solutions, Spring 2011
+</STRONG></TD></TR></TABLE>
+<hr>
+<ol>
+<li>Partitioning
+<pre>A. E E A E Y R Q U E L K V Y S T O P S I T
+        4 exchanges
+
+B. c. To avoid quadratic running time.
+
+C. A E E E E Q U Y L K R Y S T O P S I T V
+        16 exchanges
+</pre>
+
+<li>Estimating order of growth
+<pre>
+A. N&#178;
+
+B. log ( y / x)  - Note: this is log base 10.
+</pre>
+<li> Sorting algorithms
+
+<table cellpadding=10>
+<th>
+<td>sorted order</td>
+<td>reverse order</td>
+</th>
+<tr><td>Quicksort</td>
+<td>linearithmic</td>
+<td>linearithmic</td>
+<tr><td>Heapsort</td>
+<td>linearithmic</td>
+<td>linearithmic</td>
+<tr><td>Insertion sort</td>
+<td>linear</td>
+<td>quadratic</td>
+<tr><td>Selection sort</td>
+<td>quadratic</td>
+<td>quadratic</td>
+<tr><td>Shellsort</td>
+<td>linearithmic</td>
+<td><center> ?</center> </td>
+</tr>
+
+</table>
+
+<li> Tree height
+<table cellpadding=10>
+<th>
+<td>best case</td>
+<td>worst case</td>
+</th>
+<tr><td>BST</td>
+<td>log N</td>
+<td>N</td>
+<tr><td>Heap-ordered complete tree</td>
+<td>log N</td>
+<td>log N</td>
+<tr><td>Left-leaning red-black tree</td>
+<td>log N</td>
+<td>log N</td>
+<tr><td>quick-union with path compression</td>
+<td>1</td>
+<td>N</td>
+<tr><td>weighted quick-union</td>
+<td>1</td>
+<td>log N</td>
+</tr>
+
+</table>
+
+<li>LLRB insertions
+<ol type="a"><li>       <br>
+<img src="spr11/spr11-llrb.png" width=75% height=50%>          
+ 
+<li><pre>
+ 0 5
+</pre>
+<li><pre>
+ 3 7 2 8 6 1 5
+</pre>
+</ol>
+<li> Heap operations
+<ol type="a"><li>       <br>
+<img src="spr11/spr11-heap-a.png" width=70% height=40%>
+<li>       <br>
+<img src="spr11/spr11-heap-b.png"  width=60% height=50%>
+</ol>
+<li>Linear probing
+<ol type="A"><li>       <br>
+<pre> N C T I O   B A D F U
+ 0 1 2 3 4 5 6 7 8 9 10
+</pre>
+<li>
+<ol type="a">
+<li>linear
+<li>linear
+<li>quadratic
+<li>quadratic (need to check for duplicates)
+</ol>
+</ol>
+
+<p><li>
+7 sorting algorithms
+<pre>D E A G B C F</pre>
+<p><li> Maximum difference
+<ol type="A"><li> 
+<pre>
+if (a[k] - min > max) max = a[k] - min 
+if (a[k] < min) min = a[k]
+</pre>
+<li><pre>quadratic
+linear
+</pre>
+</ol>
